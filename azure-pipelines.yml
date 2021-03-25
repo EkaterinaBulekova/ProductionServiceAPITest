@@ -1,5 +1,4 @@
 # ASP.NET
-
 # Build and test ASP.NET projects.
 # Add steps that publish symbols, save build artifacts, deploy, and more:
 # https://docs.microsoft.com/azure/devops/pipelines/apps/aspnet/build-aspnet-4
@@ -33,13 +32,15 @@ steps:
   inputs:
     platform: '$(buildPlatform)'
     configuration: '$(buildConfiguration)'
+    codeCoverageEnabled: true
+
 - task: AzureRmWebAppDeployment@4
   inputs:
     ConnectionType: 'AzureRM'
     azureSubscription: 'Visual Studio Professional(ec458c5f-80b5-49cd-b370-d5b41fb58078)'
     appType: 'webApp'
-    WebAppName: 'MyProductionAPI'
+    WebAppName: 'l3u-l3unip'
     deployToSlotOrASE: true
-    ResourceGroupName: 'adventure-works-rg1'
+    ResourceGroupName: 'my-test-lab-Test-Production-API-278167'
     SlotName: 'production'
     packageForLinux: '$(build.artifactStagingDirectory)/*.zip'
