@@ -39,7 +39,7 @@ steps:
     ConnectionType: 'AzureRM'
     azureSubscription: 'Visual Studio Professional(ec458c5f-80b5-49cd-b370-d5b41fb58078)'
     appType: 'webApp'
-    WebAppName: 'l3u-l3unip'
+    WebAppName: 'ProductionAPITest'
     deployToSlotOrASE: true
     ResourceGroupName: 'my-test-lab-Test-Production-API-278167'
     SlotName: 'production'
